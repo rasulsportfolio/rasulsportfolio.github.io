@@ -4,20 +4,18 @@
 
 <h1>My First Google Map</h1>
 
-<div id="map" style="width:400px;height:400px;background:white"></div>
-
-<script>
-function myMap() {
-    var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.12),
-        zoom: 10,
-        mapTypeId: google.maps.MapTypeId.HYBRID
-    }
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-}
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+  <!-- Google Map API -->
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+  <div style='overflow:hidden;height:300px;width:500px;'>
+  <div id='gmap_canvas' style='height:300px;width:500px;'></div>
+  <div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div>
+  <div><small><a href="freedirectorysubmissionsites.com">complete list</a></small></div>
+  <style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+  <script type='text/javascript'>function init_map()
+  {
+    var myOptions = {zoom:15,center:new google.maps.LatLng(25.1571136,51.551001799999995),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(25.1571136,51.551001799999995)});infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>Al-Wukair St, Doha, Qatar<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+  </script>
+  <!-- End of Google Map API -->
 
 </body>
 </html>
