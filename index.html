@@ -1,21 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
-<head>
-<title>Rasul's Portfolio</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-</head>
+<body>
 
-<body background="bg.gif">
-<table width="828" border="0" cellpadding="0" cellspacing="0">
-  <!--DWLayoutDefaultTable-->
-  <tr> 
-    <td width="437" height="182">&nbsp;</td>
-    <td width="391">&nbsp;</td>
-  </tr>
-  <tr>
-    <td height="271">&nbsp;</td>
-    <td valign="top"><img src="index.gif" width="389" height="308"></td>
-  </tr>
-</table>
+<h1>My First Google Map</h1>
+
+<div id="map" style="width:400px;height:400px;"></div>
+
+<script>
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
 </body>
 </html>
+
